@@ -33,8 +33,8 @@ class Snake:
     def move(self):
         for seg_num in range(len(self.segment) - 1, 0, -1):
             new_x = self.segment[seg_num - 1].xcor()
-            ney_y = self.segment[seg_num - 1].ycor()
-            self.segment[seg_num].goto(new_x, ney_y)
+            new_y = self.segment[seg_num - 1].ycor()
+            self.segment[seg_num].goto(new_x, new_y)
         self.head.forward(MOVE_FORWARD)
 
     def reset(self):
